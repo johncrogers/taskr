@@ -1,30 +1,31 @@
 import React from "react";
-class App extends React.Component {
+import ReactDOM from "react-dom";
+class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    console.log(`Render App`, this.props);
+    console.log(`Render Index`, this.props);
     return (
       <div>
-        App
+        Index
         <button
           onClick={() => {
             console.log(this.state);
           }}
         >
-          App State
+          Index State
         </button>
         <button
           onClick={() => {
             console.log(this.props);
           }}
         >
-          App Props
+          Index Props
         </button>
       </div>
     );
   }
 }
-export default App;
+ReactDOM.render(<Index />, document.getElementById("app"));
