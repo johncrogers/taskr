@@ -1,0 +1,22 @@
+Technologies to Integrate:
+  ☐ Testing:
+    ☐ Front-End: Jest
+    ☐ Server:
+    ☐ Database:
+  ☐ Direct Routing / Server Side Rendering
+  ☐ Security:
+    ☐ Authorization
+    ☐ Authentication:
+      ☐ Sessions
+      ☐ Encryption
+    ☐ Forms / Validation
+  ☐ UX:
+    ☐ Loading / Wait indicators
+    ☐ Error Messages
+  ☐ UI:
+    ☐ Effects:
+      ☐ Hover
+      ☐ Transitions
+    ☐ Modals
+    ☐ Drop-Down
+  ☐ ReactNative

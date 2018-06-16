@@ -7,7 +7,7 @@
     "react": "webpack -d --watch",
     "start": "node server/index.js"
   },
-  "author": "Beth Johnson",
+  "author": "John Rogers",
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.23.1",

@@ -1,32 +1,36 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import View from "./View/View.jsx";
-class Index extends React.Component {
+class Authenticate extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
   render() {
-    // console.log(`Render Index`, this.props);
+    // console.log(`Render Authenticate`, this.props);
     return (
       <div>
-        <View />
+        <button
+          onClick={() => {
+            this.props.handleViewChange("App");
+          }}
+        >
+          Authenticate
+        </button>
         {/* <button
           onClick={() => {
             console.log(this.state);
           }}
         >
-          Index State
+          Authenticate State
         </button>
         <button
           onClick={() => {
             console.log(this.props);
           }}
         >
-          Index Props
+          Authenticate Props
         </button> */}
       </div>
     );
   }
 }
-ReactDOM.render(<Index />, document.getElementById("app"));
+export default Authenticate;
