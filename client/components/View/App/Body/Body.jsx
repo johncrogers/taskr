@@ -8,15 +8,24 @@ class Body extends React.Component {
     this.state = {
       commitments: [],
       tasks: [],
-      pendingTasks: []
+      pendingTasks: [],
+      progress: ""
     };
     this.loadTasks = this.loadTasks.bind(this);
+    this.filterTasks = this.filterTasks.bind(this);
     this.sortTasks = this.sortTasks.bind(this);
+    this.markTaskComplete = this.markTaskComplete.bind(this);
+    this.markTaskCancelled = this.markTaskCancelled.bind(this);
+    this.calculateProgress = this.calculateProgress.bind(this);
   }
   loadTasks() {
     let commitments = userTaskData.commitments;
     let tasks = userTaskData.tasks;
-    this.setState({ commitments: commitments, tasks: tasks });
+    this.setState({ commitments: commitments, tasks: tasks }, () => {
+      this.filterTasks(tasks, commitments);
+    });
+  }
+  filterTasks(tasks, commitments) {
     let pendingTasks = tasks.filter(task => {
       return task.status === "pending";
     });
@@ -97,10 +106,46 @@ class Body extends React.Component {
         }
       }
     });
-    this.setState({ pendingTasks: sortedTasks });
+    this.setState({ pendingTasks: sortedTasks }, () => {
+      this.calculateProgress();
+    });
   }
-  markTaskComplete() {}
-  markTaskCancelled() {}
+  calculateProgress() {
+    let completedTasks = this.state.tasks.filter(task => {
+      return task.status === "complete";
+    });
+    let progress = (completedTasks.length / this.state.tasks.length) * 100;
+    this.setState({ progress: progress }, () => {
+      console.log(`Progress:`, this.state.progress);
+    });
+  }
+  markTaskComplete(id) {
+    // console.log(`State:`, this.state);
+    let newTasks = this.state.tasks;
+    newTasks = newTasks.map(task => {
+      if (task.id === id) {
+        task.status = "complete";
+        return task;
+      }
+      return task;
+    });
+    this.setState({ tasks: newTasks }, () => {
+      this.filterTasks(this.state.tasks, this.state.commitments);
+    });
+  }
+  markTaskCancelled(id) {
+    let newTasks = this.state.tasks;
+    newTasks = newTasks.map(task => {
+      if (task.id === id) {
+        task.status = "cancelled";
+        return task;
+      }
+      return task;
+    });
+    this.setState({ tasks: newTasks }, () => {
+      this.filterTasks(this.state.tasks, this.state.commitments);
+    });
+  }
   componentDidMount() {
     this.loadTasks();
   }
@@ -120,7 +165,10 @@ class Body extends React.Component {
         return (
           <TaskList
             tasks={this.state.pendingTasks}
+            progress={this.state.progress}
             commitments={this.state.commitments}
+            markTaskComplete={this.markTaskComplete}
+            markTaskCancelled={this.markTaskCancelled}
           />
         );
         break;
@@ -128,7 +176,10 @@ class Body extends React.Component {
         return (
           <TaskList
             tasks={this.state.pendingTasks}
+            progress={this.state.progress}
             commitments={this.state.commitments}
+            markTaskComplete={this.markTaskComplete}
+            markTaskCancelled={this.markTaskCancelled}
           />
         );
         break;

@@ -31,7 +31,7 @@ class Navigation extends React.Component {
             List
           </button>
 
-          <button
+          {/* <button
             type="button"
             className="btn btn-primary"
             onClick={() => {
@@ -39,7 +39,7 @@ class Navigation extends React.Component {
             }}
           >
             Editor
-          </button>
+          </button> */}
           <button
             type="button"
             className="btn btn-primary"

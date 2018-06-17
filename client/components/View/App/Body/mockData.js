@@ -118,6 +118,7 @@ module.exports.tasks = [{
     priority: 1,
     commitmentId: 2,
     status: "pending",
+    id: 1
   },
   {
     title: "Apply",
@@ -128,6 +129,7 @@ module.exports.tasks = [{
     priority: 1,
     commitmentId: 2,
     status: "pending",
+    id: 2
   },
   {
     title: "Run",
@@ -138,6 +140,7 @@ module.exports.tasks = [{
     priority: 1,
     commitmentId: 1,
     status: "pending",
+    id: 3
   },
   {
     title: "Portfolio",
@@ -148,6 +151,7 @@ module.exports.tasks = [{
     priority: 2,
     commitmentId: 4,
     status: "pending",
+    id: 4
   },
   {
     title: "Practice",
@@ -158,6 +162,7 @@ module.exports.tasks = [{
     priority: 2,
     commitmentId: 4,
     status: "pending",
+    id: 5
   },
   {
     title: "Lift",
@@ -168,6 +173,7 @@ module.exports.tasks = [{
     priority: 1,
     commitmentId: 1,
     status: "pending",
+    id: 6
   },
   {
     title: "Build",
@@ -178,6 +184,7 @@ module.exports.tasks = [{
     priority: 3,
     commitmentId: 4,
     status: "pending",
+    id: 7
   },
   {
     title: "Catch Up",
@@ -188,6 +195,7 @@ module.exports.tasks = [{
     priority: 2,
     commitmentId: 3,
     status: "pending",
+    id: 8
   },
   {
     title: "Catch Up",
@@ -198,6 +206,7 @@ module.exports.tasks = [{
     priority: 1,
     commitmentId: 3,
     status: "pending",
+    id: 9
   },
   {
     title: "Budget",
@@ -208,5 +217,6 @@ module.exports.tasks = [{
     priority: 1,
     commitmentId: 2,
     status: "pending",
+    id: 10
   }
 ]

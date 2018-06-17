@@ -17,7 +17,7 @@ class Task extends React.Component {
               type="button"
               className="btn btn-success"
               onClick={() => {
-                this.props.markComplete;
+                this.props.markTaskComplete(this.props.task.id);
               }}
             >
               &#10003;
@@ -27,7 +27,7 @@ class Task extends React.Component {
               type="button"
               className="btn btn-danger"
               onClick={() => {
-                this.props.markComplete;
+                this.props.markTaskCancelled(this.props.task.id);
               }}
             >
               X
