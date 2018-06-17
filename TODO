@@ -28,14 +28,6 @@ STORY:
   ☐ Task: Repeated actions that make progress towards a checkpoint.
 
   - As a user I should be able to...
-  ☐ Tutorial Task List:
-    ☐ Learn about each feature through a guided checklist tutorial.
-  ☐ List:
-    ☐ View a list of priority sorted tasks for the day.
-    ☐ Remove tasks from the list by:
-      ☐ Marking tasks as complete.
-      ☐ Marking tasks as cancelled.
-    ☐ Get completion points for completing a task.
   ☐ Editor:
     ☐ Add new:
       ☐ Commitments
@@ -52,7 +44,45 @@ STORY:
         ☐ Goals
           ☐ Checkpoints
             ☐ Tasks
+  ☐ List:
+    ☐ View a list of priority sorted tasks for the day.
+    ☐ Remove tasks from the list by:
+      ☐ Marking tasks as complete.
+      ☐ Marking tasks as cancelled.
+    ☐ Get completion points for completing a task.
   ☐ Analytics:
     ☐ View task completion success statistics.
     ☐ View goal progress statistics.
     ☐ View task completion / goal progress comparisons.
+  ☐ Tutorial Task List:
+    ☐ Learn about each feature through a guided checklist tutorial.
+
+TODO:
+  ☐ General:
+    ☐ Map data model
+  ☐ Client:
+    ☐ Editor:
+      ☐ Wireframe
+      ☐ UX models
+      ☐ React structure
+      ☐ Functions
+      ☐ UI
+      ☐ TEST
+  ☐ Server:
+    ☐ Build data models
+    ☐ ROUTES:
+      ☐ GET:
+        ☐ User
+        ☐ Commitments
+        ☐ Goals
+        ☐ Checkpoints
+        ☐ Tasks
+      ☐ POST:
+        ☐ User
+        ☐ Commitments
+        ☐ Goals
+        ☐ Checkpoints
+        ☐ Tasks
+  ☐ Database:
+    ☐ Build Schema
+    ☐ Create database (SQLite3)

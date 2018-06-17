@@ -19,11 +19,13 @@ class TaskList extends React.Component {
           </thead>
           <tbody>
             {this.props.tasks.map(task => {
-              return <Task task={task} />;
+              if (task.status === "pending") {
+                return <Task task={task} />;
+              }
             })}
           </tbody>
         </table>
-        {/* <button
+        <button
           onClick={() => {
             console.log(this.state);
           }}
@@ -36,7 +38,7 @@ class TaskList extends React.Component {
           }}
         >
           TaskList Props
-        </button> */}
+        </button>
         <div className="container">
           <div className="progress" style={{ margin: "0px", padding: "0px" }}>
             <div
