@@ -19,4 +19,40 @@ Technologies to Integrate:
       ☐ Transitions
     ☐ Modals
     ☐ Drop-Down
-  ☐ ReactNative
+  ☐ React Native
+
+STORY:
+  ☐ Commitment: The reason you want to take action.
+  ☐ Goal: Achievement that indicates fullfillment of a commitment to oneself.
+  ☐ Checkpoint: Measurments of progress on the path to completing a goal.
+  ☐ Task: Repeated actions that make progress towards a checkpoint.
+
+  - As a user I should be able to...
+  ☐ Tutorial Task List:
+    ☐ Learn about each feature through a guided checklist tutorial.
+  ☐ List:
+    ☐ View a list of priority sorted tasks for the day.
+    ☐ Remove tasks from the list by:
+      ☐ Marking tasks as complete.
+      ☐ Marking tasks as cancelled.
+    ☐ Get completion points for completing a task.
+  ☐ Editor:
+    ☐ Add new:
+      ☐ Commitments
+        ☐ Goals
+          ☐ Checkpoints
+            ☐ Tasks
+    ☐ Edit:
+      ☐ Commitments
+        ☐ Goals
+          ☐ Checkpoints
+            ☐ Tasks
+    ☐ Remove old:
+      ☐ Commitments
+        ☐ Goals
+          ☐ Checkpoints
+            ☐ Tasks
+  ☐ Analytics:
+    ☐ View task completion success statistics.
+    ☐ View goal progress statistics.
+    ☐ View task completion / goal progress comparisons.

@@ -7,41 +7,49 @@ class Navigation extends React.Component {
   render() {
     // console.log(`Render Navigation`, this.props);
     return (
-      <nav className="navbar navbar-dark bg-dark">
+      // <nav
+      //   className="navbar navbar-dark bg-dark"
+      //   style={{ margin: "0px", padding: "0px" }}
+      // >
+      <div>
         <a className="navbar-brand" href="#">
           Taskr
         </a>
-        <div className="navbar-nav">
-          <div className="btn-group" role="group" aria-label="Actions">
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={() => {
-                this.props.handleActionChange("List");
-              }}
-            >
-              List
-            </button>
+        <div
+          className="btn-group col text-right"
+          role="group"
+          aria-label="Actions"
+          style={{ marginTop: "5px", marginRight: "5px", padding: "0px" }}
+        >
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => {
+              this.props.handleActionChange("List");
+            }}
+          >
+            List
+          </button>
 
-            <button
-              type="button"
-              className="btn btn-secondary"
-              onClick={() => {
-                this.props.handleActionChange("Editor");
-              }}
-            >
-              Editor
-            </button>
-            <button
-              type="button"
-              className="btn btn-primary"
-              onClick={() => {
-                this.props.handleViewChange("Authenticate");
-              }}
-            >
-              Log Out
-            </button>
-          </div>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => {
+              this.props.handleActionChange("Editor");
+            }}
+          >
+            Editor
+          </button>
+          <button
+            type="button"
+            className="btn btn-primary"
+            onClick={() => {
+              this.props.handleViewChange("Authenticate");
+            }}
+          >
+            Log Out
+          </button>
+          {/* <div className="navbar-nav" /> */}
         </div>
         {/* <button
           onClick={() => {
@@ -78,7 +86,7 @@ class Navigation extends React.Component {
         >
           Navigation Props
         </button> */}
-      </nav>
+      </div>
     );
   }
 }

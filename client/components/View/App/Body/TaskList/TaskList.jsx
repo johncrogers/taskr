@@ -8,19 +8,7 @@ class TaskList extends React.Component {
   render() {
     // console.log(`Render TaskList`, this.props);
     return (
-      <div>
-        <div className="container">
-          <div className="progress">
-            <div
-              className="progress-bar"
-              role="progressbar"
-              style={{ width: "0%", margin: "0px" }}
-              aria-valuenow="25"
-              aria-valuemin="0"
-              aria-valuemax="100"
-            />
-          </div>
-        </div>
+      <div style={{ margin: "0px", padding: "0px" }}>
         <table className="table table-hover table-striped table-dark">
           <thead>
             <tr>
@@ -49,6 +37,18 @@ class TaskList extends React.Component {
         >
           TaskList Props
         </button> */}
+        <div className="container">
+          <div className="progress" style={{ margin: "0px", padding: "0px" }}>
+            <div
+              className="progress-bar"
+              role="progressbar"
+              style={{ width: "35%", margin: "0px", padding: "0px" }}
+              aria-valuenow="25"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            />
+          </div>
+        </div>
       </div>
     );
   }
